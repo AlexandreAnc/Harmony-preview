@@ -23,5 +23,5 @@ Harmony est un projet fictif permettant aux clients de créer leurs propres viny
 
 
 ---
-Projet fictif créé à des fins d'apprentissage réalisé en 2023
+Projet fictif réalisé à des fins d'apprentissage par groupe de 4 en février 2023
 
