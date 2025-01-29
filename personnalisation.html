@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnalisation de Vinyle - Harmony</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Hachi Maru Pop" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icon.ico" />
+    <link rel="stylesheet" href="style-perso.css">
+</head>
+<script src="js/script-perso.js"></script>
+<script src="js/script-track.js"></script>
+<div>
+    <header>
+        <nav class="menu-principal">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="personnalisation.html">Personnalisation</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <div class="icon">
+                    <li>
+                        <a href="connexion.html"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <nav class="menu-mobile">
+        <ul>
+            <li>
+                <a href="index.html"><i class="fas fa-home"></i></a>
+            </li>
+            <li>
+                <a href="personnalisation.html"><i class="fa-solid fa-record-vinyl"></i></a>
+            </li>
+            <li>
+                <a href="contact.html"><i class="fas fa-envelope"></i></a>
+            </li>
+            <li>
+                <a href="connexion.html"><i class="fa-regular fa-circle-user"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="customization-page">
+            <div class="sidebar">
+              <h2>Personnalise ton vinyle</h2>
+            </div>
+            <div class="options-container">
+              <img class="option" src="img/logo-pochette-photo.png" alt="Photo Pochette" onmouseover="changeImage('img/logo-pochette-photo-1.png')" onclick="toggleDivsImg('options-container-img')">
+              <p>Pochette Photo</p>
+              <img class="option" src="img/couleur-bleu.png" alt="Couleurs Pochette" onmouseover="changeImage('img/logo-pochette-photo-2.png')"  onclick="toggleDivsColor('.options-container-img')">
+              <p>Pochette de couleur</p>
+            </div>
+            <div class="options-container-img">
+                <img class="option" src="img/logo-pochette-photo.png" data-option="Pochette" data-value="Photo n°1" alt="Photo Pochette" onmouseover="changeImage('img/logo-pochette-photo-1.png')" onclick="toggleDivsSkin('.options-container-disque-perso-q')">
+                <p>Image n°1</p>
+                <img class="option" src="img/logo-pochette-photo-b.png" alt="Couleurs Pochette" data-option="Pochette" data-value="Photo n°2" onmouseover="changeImage('img/logo-pochette-photo-img-1.png')" onclick="toggleDivsSkin('.options-container-disque-perso-q')">
+                <p>Image n°2</p>
+                <input type="file" id="photo-upload" accept="image/*">
+                <p>Choisir sa photo (non fait)</p>
+            </div>
+            <div class="options-container-color">
+                <img class="option" src="img/couleur-bleu.png" alt="Photo Pochette" data-option="Pochette" data-value="Couleur Bleu" onmouseover="changeImage('img/logo-pochette-photo-2.png')" onclick="toggleDivsSkin('.options-container-disque-perso-q')">
+                <p>Couleur Bleu</p>
+                <img class="option" src="img/couleur-terre.png" alt="Couleurs Pochette" data-option="Pochette" data-value="Couleur Terre" onmouseover="changeImage('img/terre-disque.png')" onclick="toggleDivsSkin('.options-container-disque-perso-q')">
+                <p>Couleur Terre</p>
+                <input type="color" value="#ff0000" class="choose-color">
+            </div>
+            <div class="options-container-disque-perso-q">
+                <img class="option" src="img/stelaire-preview.png" alt="Photo Pochette"  onmouseover="changeSkin('img/skin-solaire.png')" onclick="toggleDivsSkinPhoto('.options-container-disque-perso-q')">
+                <p>Disque Photo</p>
+                <img class="option" src="img/couleur-bleu.png" alt="Couleurs Pochette" onmouseover="changeSkin('img/blue-skin.png')" onclick="toggleDivsSkinCouleur('.options-container-disque-perso-q')">
+                <p>Disque de Couleur</p>
+            </div>
+            <div class="options-container-skin-photo">
+                <img class="option" src="img/stelaire-preview.png" alt="Photo Pochette" data-option="Disque" data-value="Photo Stélaire" onmouseover="changeSkin('img/skin-solaire.png')" onclick="toggleDivsMusic('.options-container-skin-photo')">
+                <p>Disque Stelaire</p>
+                <img class="option" src="img/lemmon-preview.png" alt="Couleurs Pochette" data-option="Disque" data-value="Photo Citron" onmouseover="changeSkin('img/lemmon-skin.png')" onclick="toggleDivsMusic('.options-container-skin-photo')">
+                <p>Disque Citron</p>
+            </div>
+            <div class="options-container-skin-couleur">
+                <img class="option" src="img/couleur-bleu.png" alt="Photo Pochette" data-option="Disque" data-value="Couleur Bleu" onmouseover="changeSkin('img/blue-skin.png')" onclick="toggleDivsMusic('.options-container-skin-couleur')">
+                <p>Disque Bleu</p>
+                <img class="option" src="img/couleur-terre.png" alt="Couleurs Pochette" data-option="Disque" data-value="Couleur Terre" onmouseover="changeSkin('img/terre-skin.png')" onclick="toggleDivsMusic('.options-container-skin-couleur')">
+                <p>Disque de Terre</p>
+            </div>
+            <div class="track-search-container">
+                <h3>Entrez vos titres</h3>
+                <div class="search-bar">
+                    <input type="text" id="trackName" placeholder="Nom du titre - artiste">
+                    <button onclick="Timer()"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="trackResults"></div>
+                <div class="confirm-and-price">
+                    <button id="confirmButton" onclick="confirmSelection()">Acheter</button>
+                    <span id="totalPrice">Prix: 9.5€</span>
+                </div>
+                <p style="color: rgb(219, 91, 91); text-decoration: underline; font-size: 14px;">Fonction désactivé pour la prévisualisation de mon portfolio.<br>Ce système fonctionnait via une application Flask connecté à l'APi de spotify pour aller chercher des titres.</p>
+            </div>
+            <div class="image-preview-container">
+                <div class="image-preview">
+                  <img id="selected-image" src="img/disc-disco.png" alt="Aperçu personnalisé">
+                </div>
+                <div class="underlay-image">
+                  <img id="skin" src="img/transparent.png" alt="" class="skin-c">
+                </div>
+            </div>
+            <div id="trackSummary"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="text-social-media">
+                <p>Nos réseaux sociaux :</p>
+            </div>
+            <div class="link-social-media">
+                <a href="https://www.instagram.com/harmony_vinyle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/Harmonyvinyles" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/harmony_vinyle" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div class="copyright">
+            <p>© Harmony Vinyle 2023</p>
+            </div>
+            <div class="juridique">
+                <br>
+                <a href="mentions-legales.html">Mentions légales</a>
+                <br>
+                <a href="cgu.html">CGU</a>
+                <br>
+                <a href="cgv.html">CGV</a>
+            </div>
+        </div>
+    </footer>      
+</body>
+</html>
+    
